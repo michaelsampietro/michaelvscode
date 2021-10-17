@@ -48,6 +48,8 @@ ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
 # RUN COPY myTool /home/coder/myTool
 
 # Install NodeJS
+RUN sudo apt-get update
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install -y wget
 
